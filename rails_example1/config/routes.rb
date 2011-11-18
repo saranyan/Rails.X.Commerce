@@ -1,12 +1,11 @@
 RailsExample1::Application.routes.draw do
 
-  
-  get "listing/create"
-
   match '/xfabric/capability/endpoint/results' => 'xfabric#endpoint_results'
   match '/xfabric/tenant/updated' => 'xfabric#tenant_updated'
   match '/xfabric/topic/define/results' => 'xfabric#define_results'
   match '/xfabric/topic/registration/results' => 'xfabric#registration_results'
+  
+  match '/listing/create' => 'listing#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
